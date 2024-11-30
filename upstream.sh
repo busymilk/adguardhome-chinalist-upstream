@@ -15,15 +15,15 @@ fi
 if [[ $IPv4 == "true" ]]; then
 	if [[ $IPv6 == "true" ]]; then
 		echo "$DATE: IPv4 and IPv6 connections both available."
-		curl -o "/tmp/default.upstream" https://raw.githubusercontent.com/busymilk/adguardhome-chinalist-upstream/refs/heads/master/v6.conf > /dev/null 2>&1
+		curl -o "/tmp/default.upstream" https://raw.gitmirror.com/busymilk/adguardhome-chinalist-upstream/refs/heads/master/v6.conf > /dev/null 2>&1
 	else
 		echo "$DATE: Only IPv4 connection available."
-		curl -o "/tmp/default.upstream" https://raw.githubusercontent.com/busymilk/adguardhome-chinalist-upstream/refs/heads/master/v4.conf > /dev/null 2>&1
+		curl -o "/tmp/default.upstream" https://raw.gitmirror.com/busymilk/adguardhome-chinalist-upstream/refs/heads/master/v4.conf > /dev/null 2>&1
 	fi
 else
 	if [[ $IPv6 == "true" ]]; then
 		echo "$DATE: Only IPv6 connection available."
-		curl -o "/tmp/default.upstream" https://raw.githubusercontent.com/busymilk/adguardhome-chinalist-upstream/refs/heads/master/v6only.conf > /dev/null 2>&1
+		curl -o "/tmp/default.upstream" https://raw.gitmirror.com/busymilk/adguardhome-chinalist-upstream/refs/heads/master/v6only.conf > /dev/null 2>&1
 	else
 		echo "$DATE: No available network connection was detected, please try again."
 		exit 1
@@ -31,7 +31,7 @@ else
 fi
 
 echo "$DATE: Getting data updates..."
-curl -o /tmp/chinalist.upstream https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/refs/heads/master/accelerated-domains.china.conf
+curl -o /tmp/chinalist.upstream https://raw.gitmirror.com/felixonmars/dnsmasq-china-list/refs/heads/master/accelerated-domains.china.conf
 echo "$DATE: Processing data format..."
 sed -i  "s|server=|[|g" /usr/share/adguardhome.upstream
 sed -i  "s|/114|/]|g" /usr/share/adguardhome.upstream
