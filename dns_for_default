@@ -1,23 +1,17 @@
 #解析外网地址用，将dns服务器的域名都改为ip了，省了dns步骤了
 
-#这个好像访问不了
-#https://dns64.dns.google/dns-query
-
 https://1.0.0.1/dns-query
 
 #https://dns.quad9.net/dns-query
 https://9.9.9.9/dns-query
-https://149.112.112.112/dns-query
 
 #https://doh.sb/dns-query
 https://185.222.222.222/dns-query
 
 #https://dns.opendns.com/dns-query
 https://208.67.220.220/dns-query
-https://208.67.222.222/dns-query
 
 #https://unfiltered.adguard-dns.com/dns-query
-https://94.140.14.140/dns-query
 https://94.140.14.141/dns-query
 
 #https://dns.google/dns-query
@@ -28,7 +22,4 @@ https://104.16.248.249/dns-query
 
 #https://public.dns.iij.jp/dns-query 日本
 https://103.2.57.6/dns-query
-
-#https://dns.twnic.tw/dns-query 台湾
-https://101.101.101.101/dns-query 
 
