@@ -1,8 +1,5 @@
 #解析外网地址用，将dns服务器的域名都改为ip了，省了dns步骤了,选取了延迟小的dns服务器
 
-#https://doh.opendns.com/dns-query
-https://146.112.41.2/dns-query
-
 #https://hk-hkg.doh.sb/dns-query 香港
 https://45.125.0.26/dns-query
 
